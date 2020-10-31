@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  marvel
+
+  Created by Jorge Lapeña Antón on 31/10/2020.
+  Copyright © 2020 qpple. All rights reserved.
+*/
+"generic_error" = "Se ha producido un error al recuperar la información";
+"error_web" = "Vaya, no podemos acceder a esta página.";
+"search_title" = "Busqueda";
+"cancel" = "Cancelar";
+"accept" = "Aceptar";
+"search" = "Buscar";
+"error" = "Error";
+"comics" = "Comics";
+"series" = "Series";
+"stories" = "Historias";
+"events" = "Eventos";
+"urls" = "Urls";
