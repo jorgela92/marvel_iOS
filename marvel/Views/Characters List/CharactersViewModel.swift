@@ -12,9 +12,7 @@ class CharactersViewModel {
 
     fileprivate let charactersServiceHandler: CharactersServiceHandler
     fileprivate var characters: CharactersModel?
-    fileprivate var elementsPagination = 20
     fileprivate var charactersSearch: CharactersModel?
-    fileprivate var elementsPaginationSearch = 20
     fileprivate var isErrorCharacters = false
     fileprivate var isErrorCharactersSearch = false
     var searchText: String?
@@ -90,8 +88,7 @@ private extension CharactersViewModel {
                                 weakself.charactersSearch?.data.total = characters.data.total
                                 weakself.charactersSearch?.data.count = characters.data.count
                             }
-                            weakself.charactersSearch?.data.offset = characters.data.offset + weakself.elementsPaginationSearch
-                            weakself.charactersSearch?.data.limit = characters.data.limit + weakself.elementsPaginationSearch
+                            weakself.charactersSearch?.data.offset = characters.data.offset + characters.data.limit
                         } else {
                             if weakself.characters == nil {
                                 weakself.characters = characters
@@ -100,8 +97,7 @@ private extension CharactersViewModel {
                                 weakself.characters?.data.total = characters.data.total
                                 weakself.characters?.data.count = characters.data.count
                             }
-                            weakself.characters?.data.offset = characters.data.offset + weakself.elementsPagination
-                            weakself.characters?.data.limit = characters.data.limit + weakself.elementsPagination
+                            weakself.characters?.data.offset = characters.data.offset + characters.data.limit
                         }
                     }
                     observer.onCompleted()
